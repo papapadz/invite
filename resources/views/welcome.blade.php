@@ -10,10 +10,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <style>
+            body,html {
+                height: 100%;
+            }
+        </style>
     </head>
     <body>
-        <div id="app" class="flex-center position-ref full-height">
-           <index-component></index-component>
+        <div id="app" class="d-flex align-items-center flex-column justify-content-center h-100 bg-dark text-white" id="header">
+            <index-component></index-component>
         </div>
     </body>
     <script src="{{ asset('js/app.js') }}" ></script>

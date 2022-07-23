@@ -15,9 +15,9 @@ class CreatePeopleTable extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('lastname',20);
-            $table->string('firstname',20);
-            $table->string('nickname',10);
+            $table->string('lastname',50);
+            $table->string('firstname',50);
+            $table->string('nickname',20);
             $table->enum('gender',['M','F']);
             $table->string('image',100)->nullable();
             $table->timestamps();

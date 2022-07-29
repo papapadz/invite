@@ -17,7 +17,7 @@
         </style>
     </head>
     <body>
-        <div id="app" class="d-flex align-items-center flex-column justify-content-center h-100 bg-dark text-white" id="header">
+        <div id="app" class="d-flex align-items-center flex-column justify-content-center h-100 bg-dark">
             <index-component
                 url="{{ url('api') }}"
             ></index-component>

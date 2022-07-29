@@ -10,4 +10,8 @@ class Assignment extends Model
         'person',
         'assignment'
     ];
+
+    public function item() {
+        return $this->hasOne(AssignmentItem::class,'id','assignment');
+    }
 }

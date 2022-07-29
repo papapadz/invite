@@ -13,4 +13,8 @@ class Person extends Model
         'gender',
         'image'
     ];
+
+    public function assignment() {
+        return $this->hasOne(Assignment::class,'person','id');
+    }
 }

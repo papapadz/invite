@@ -17,6 +17,7 @@ class CreateAssignmentsTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('person');
             $table->bigInteger('assignment');
+            $table->longText('message');
             $table->timestamps();
         });
     }

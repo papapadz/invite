@@ -164,7 +164,7 @@ export default {
                 self.code.state = response.data.state
                 if(response.data.state) {
                     self.config.bgImage = self.images.one
-                    self.config.page = 2
+                    self.config.page = 3
                     self.user = response.data.user
                     setTimeout(function() {
                         self.buttons.show = true

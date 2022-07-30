@@ -51,19 +51,15 @@
       <b-card-text>
         Don't forget your bow tie, any color will do ⧓ 👍
       </b-card-text>
-      <b-card-text class="small text-muted">Last updated 3 mins ago</b-card-text>
     </b-card>
 
-    <b-card :img-src="item.image" img-alt="Image" overlay></b-card>
+    <b-card :img-src="item.image" overlay></b-card>
 
     <b-card img-src="https://fenwickisland.delaware.gov/files/2022/02/Bonfire-Image.jpg" img-alt="Image" img-top>
       <b-card-text>
         This is a wider card with supporting text below as a natural lead-in to additional content.
         This card has even longer content than the first.
       </b-card-text>
-      <template #footer>
-        <small class="text-muted">Footer Text</small>
-      </template>
     </b-card>
   </b-card-group>
 </div>

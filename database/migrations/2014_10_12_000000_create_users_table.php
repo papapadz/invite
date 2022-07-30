@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('code',4)->unique();
             $table->bigInteger('person');
             //$table->string('password');
+            $table->boolean('accepted')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -57,10 +57,7 @@
 
     <b-card img-height="100" img-src="https://fenwickisland.delaware.gov/files/2022/02/Bonfire-Image.jpg" img-alt="Image" img-top>
       <b-card-text>
-        The ceremony will be at Paoay Church, Paoay, Ilocos Norte ⛪️.
-      </b-card-text>
-      <b-card-text>
-        Reception will follow at at Reo's Kaburburnayan Resort, Burgos, Ilocos Norte 👓 🏖.
+        The ceremony will be at Paoay then an hour ride to Burgos, Ilocos Norte 👓 🏖.
       </b-card-text>
       <b-card-text>
         This is a <b-badge pill variant="primary">R</b-badge><b-badge pill variant="success">S</b-badge><b-badge pill variant="info">V</b-badge><b-badge pill variant="danger">P</b-badge> event

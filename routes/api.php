@@ -19,3 +19,4 @@ use Illuminate\Http\Request;
 
 Route::post('login','ModuleController@login');
 Route::post('assignment','ModuleController@assignment');
+Route::post('answer','ModuleController@answer');

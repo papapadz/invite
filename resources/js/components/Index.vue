@@ -1,6 +1,6 @@
 <template>
 <div>
-    <b-overlay :show="show" class="d-inline-block">
+    <b-overlay :show="show">
     <b-card v-if="config.page==1" 
         img-src="https://www.pngkit.com/png/detail/207-2076842_email-icon-blue-png.png"
         img-top
@@ -71,7 +71,7 @@
                     <p class="mb-0 mt-2 font-italic">
                         {{ user.assignment.message }}
                     </p>
-                    <footer class="blockquote-footer pt-4 mt-4 border-top"> Ben & Steff
+                    <footer class="blockquote-footer pt-4 mt-4 border-top"> Benoe
                         <div class="float-right" v-if="buttons.show">
                             <b-button pill @click="buttonClick(true)" variant="success">Sure, I'll be there</b-button>
                             <b-button pill @click="buttonClick(false)" variant="danger">Sorry, I can't make it</b-button>
@@ -79,8 +79,9 @@
                     </footer>
                 </blockquote><!-- END -->
     </div>
-    </b-overlay>
     <Details :url="config.url" :user="user" v-if="config.page==3"></Details>
+    <b-card v-if="config.page==4" img-src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/86395/s960_thank_you_sticky_note.jpg" overlay></b-card>
+    </b-overlay>
 </div>
 </template>
 
@@ -125,9 +126,6 @@ export default {
     computed: {
         checkState() {
             return this.code.state
-        },
-        greetings() {
-            return "Hi, "+this.user.nickname+"!"
         }
     },
     data: function() {
@@ -150,7 +148,7 @@ export default {
             buttons: {
                 show: false
             },
-            person: null,
+            user: null,
             message: null,
             show: true
         }
@@ -158,23 +156,55 @@ export default {
     methods: {
         login() {
             var self = this
+            this.show = true
             axios.post(this.config.url+'/login', {
                 code:this.code.one+this.code.two+this.code.three+this.code.four
             }).then(function(response) {
+                self.show = false
                 self.code.state = response.data.state
+                console.log(response.data.user)
+                    
                 if(response.data.state) {
                     self.config.bgImage = self.images.one
-                    self.config.page = 3
                     self.user = response.data.user
                     setTimeout(function() {
                         self.buttons.show = true
                     }, 3000)
+                    
+                    if(response.data.accepted==null)
+                        self.config.page = 2
+                    else if(response.data.accepted==1)
+                        self.config.page = 3
+                    else
+                        self.config.page = 4
                 }
             })
         },
         buttonClick(answer) {
-            if(answer)
+            var self = this
+            this.show = true
+            
+            axios.post(this.config.url+'/answer', {
+                person:this.user.id,answer:answer
+            }).then(function() {
+                self.show = false
+            })
+            
+            if(answer) {
+                this.$bvToast.toast('I will be contacting you again, the soonest!', {
+                    title: 'Thanks '+ this.user.nickname+'!',
+                    variant: 'success',
+                    solid: true
+                })
                 this.config.page = 3
+            } else {
+                this.$bvToast.toast('Thank you, for letting me know.', {
+                    title: 'Hi '+ this.user.nickname+'!',
+                    variant: 'default',
+                    solid: true
+                })
+                this.config.page = 4
+            }
         }
     }
 }

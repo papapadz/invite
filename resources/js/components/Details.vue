@@ -1,14 +1,13 @@
 <template>
-<div class="col-lg-6 mx-auto">
-  <b-card-group columns>
+<div class="d-flex align-items-center flex-column justify-content-center mx-auto">
+  <b-card-group class="col-lg-6" columns>
 
     <b-card :header="item.title">
-      <blockquote class="blockquote mb-0">
         <p>{{ item.description }}</p>
-      </blockquote>
     </b-card>
 
     <b-card
+      img-height="100"
       img-src="https://cdn.shopify.com/s/files/1/0390/3966/4260/products/mens-white-cotton-linen-lightweight-long-sleeve-shirt-tbmk05713-1_304x400_crop_center.jpg?v=1653562524"
       img-alt="Image"
       img-top
@@ -24,6 +23,7 @@
     </b-card>
 
     <b-card
+    img-height="100"
         img-src="https://cdn.shopify.com/s/files/1/2140/5321/products/Custom-Cotton-Dress-Pants-The-Lasalle-Khakee-1d.png?v=1510221711" img-alt="Image" img-top>
       <b-card-title>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-2-circle" viewBox="0 0 16 16">
@@ -55,11 +55,17 @@
 
     <b-card :img-src="item.image" overlay></b-card>
 
-    <b-card img-src="https://fenwickisland.delaware.gov/files/2022/02/Bonfire-Image.jpg" img-alt="Image" img-top>
+    <b-card img-height="100" img-src="https://fenwickisland.delaware.gov/files/2022/02/Bonfire-Image.jpg" img-alt="Image" img-top>
       <b-card-text>
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This card has even longer content than the first.
+        The ceremony will be at Paoay Church, Paoay, Ilocos Norte ⛪️.
       </b-card-text>
+      <b-card-text>
+        Reception will follow at at Reo's Kaburburnayan Resort, Burgos, Ilocos Norte 👓 🏖.
+      </b-card-text>
+      <b-card-text>
+        This is a <b-badge pill variant="primary">R</b-badge><b-badge pill variant="success">S</b-badge><b-badge pill variant="info">V</b-badge><b-badge pill variant="danger">P</b-badge> event
+      </b-card-text>
+      <b-card-text class="small text-muted">Invitation to Follow! 💌</b-card-text>
     </b-card>
   </b-card-group>
 </div>

@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/save-the-date', function () {
+    return view('save-the-date');
+});

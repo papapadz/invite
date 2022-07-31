@@ -29,6 +29,7 @@ Vue.use(IconsPlugin)
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('index-component', require('./components/Index.vue').default);
+Vue.component('save-the-date-component', require('./components/SaveTheDate/Index.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

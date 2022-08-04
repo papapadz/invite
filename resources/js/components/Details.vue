@@ -18,7 +18,7 @@
         </svg> Top
       </b-card-title>
       <b-card-text>
-        For your top, you will wear a 🥼 WHITE LONG SLEEVE POLO, can be a regular collar or a chinese collar, your choice, your style 👍
+        For your top, you will wear a 🥼 WHITE LONG SLEEVE POLO, your choice, your style 👍
       </b-card-text>
     </b-card>
 

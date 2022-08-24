@@ -158,7 +158,9 @@ figure figcaption button {
     </head>
     <body class="bg-dark">
         <div id="app" class="d-flex align-items-center flex-column justify-content-center">
-            <save-the-date-component url="{{ asset('res') }}"></save-the-date-component>
+          <video controls>
+            <source src="{{ asset('res/vid/SavetheDate.mp4') }}" type="video/mp4">
+          </video>
         </div>
     </body>
     <script src="{{ asset('js/app.js') }}" ></script>

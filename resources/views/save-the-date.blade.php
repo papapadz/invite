@@ -156,10 +156,12 @@ figure figcaption button {
 }
         </style>
     </head>
-    <body>
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="{{ asset('res/vid/SavetheDate.mp4') }}" allowfullscreen></iframe>
-      </div>
+    <body class="bg-dark">
+        <div class="d-flex align-items-center flex-column justify-content-center">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{ asset('res/vid/SavetheDate.mp4') }}" allowfullscreen></iframe>
+          </div>
+        </div>
     </body>
     <script src="{{ asset('js/app.js') }}" ></script>
 </html>
